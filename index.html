@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoptafácil - Encuentra tu mascota ideal</title>
-    
-    <!-- Inclusión de Tailwind CSS (framework de estilos) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Inclusión de la librería particles.js para efectos de fondo -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
-    <!-- Estilos CSS personalizados -->
+
     <style>
-        /* Animación de entrada para elementos */
+        /* Animación de entrada */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        /* Clase para aplicar la animación */
-        .fade-in { 
-            animation: fadeIn 1s ease-out; 
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
         }
-        /* Efecto hover para tarjetas de mascotas */
-        .pet-card:hover { 
-            transform: translateY(-5px); 
+
+        .pet-card:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
 
 <!-- Cuerpo de la página con fondo gris claro -->
+
 <body class="bg-gray-50 min-h-screen">
-    <!-- ============================================= -->
-    <!-- SECCIÓN DE PARTÍCULAS (FONDO DINÁMICO) -->
-    <!-- ============================================= -->
-    <div id="particles-js" class="fixed inset-0 z-0"></div>
 
     <!-- ============================================= -->
     <!-- HEADER - BARRA DE NAVEGACIÓN -->
@@ -47,7 +46,7 @@
                 <img src="Logo.png" alt="Logo Adoptafácil" class="h-12">
                 <h1 class="text-2xl font-bold text-blue-600">ADOPTAFÁCIL</h1>
             </div>
-            
+
             <!-- Menú principal (oculto en móviles) -->
             <nav class="hidden md:flex space-x-6">
                 <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">ADOPTAR</a>
@@ -55,38 +54,39 @@
                 <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">GATOS</a>
                 <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">OTRAS MASCOTAS</a>
             </nav>
-            
+
             <!-- Botones de acción -->
             <div class="flex items-center space-x-4">
-                <a href="https://beto18v.github.io/Adoptafacil/" class="text-blue-600 hover:underline">Iniciar sesión</a>
-                <a href="https://beto18v.github.io/Registro/" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Registrarse</a>
+                <a href="https://beto18v.github.io/Adoptafacil/" class="text-blue-600 hover:underline">Iniciar
+                    sesión</a>
+                <a href="https://beto18v.github.io/Registro/"
+                    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Registrarse</a>
             </div>
         </div>
     </header>
-
-    <!-- ============================================= -->
     <!-- HERO SECTION - PORTADA PRINCIPAL -->
-    <!-- ============================================= -->
     <section class="relative bg-gradient-to-r from-blue-500 to-green-400 text-white py-20">
-        <div class="container mx-auto px-4 text-center z-10 relative">
+        <div id="particles-js" class="fixed inset-0 z-0"></div>
+        <div class="container mx-auto px-4 text-center relative">
             <!-- Título principal -->
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Encuentra a tu nuevo mejor amigo</h2>
-            
             <!-- Subtítulo -->
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Conectamos a mascotas necesitadas con hogares amorosos desde 2023</p>
-            
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Conectamos a mascotas necesitadas con hogares amorosos desde 2025
+            </p>
+
             <!-- Barra de búsqueda -->
             <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-2 flex">
                 <!-- Campo de búsqueda por raza -->
-                <input type="text" placeholder="Buscar por raza (Ej: Terrier, Siames)" 
-                       class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-700">
-                
+                <input type="text" placeholder="Buscar por raza (Ej: Terrier, Siames)"
+                    class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-700">
+
                 <!-- Campo de búsqueda por ubicación -->
-                <input type="text" placeholder="Ciudad, Estado o Código Postal" 
-                       class="flex-grow px-4 py-3 border-l border-gray-200 focus:outline-none text-gray-700">
-                
+                <input type="text" placeholder="Ciudad"
+                    class="flex-grow px-4 py-3 border-l border-gray-200 focus:outline-none text-gray-700">
+
                 <!-- Botón de búsqueda -->
-                <button class="bg-blue-600 text-white px-6 py-3 rounded-r-lg hover:bg-blue-700 transition">Buscar</button>
+                <button
+                    class="bg-blue-600 text-white px-6 py-3 rounded-r-lg hover:bg-blue-700 transition">Buscar</button>
             </div>
         </div>
     </section>
@@ -98,16 +98,17 @@
         <!-- SECCIÓN: MASCOTAS DESTACADAS -->
         <section class="mb-16 fade-in">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Mascotas disponibles</h2>
-            
+
             <!-- Grid de tarjetas de mascotas -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+
                 <!-- Tarjeta de mascota 1 -->
-                <div class="pet-card bg-white rounded-xl shadow-md overflow-hidden transition transform hover:shadow-xl">
+                <div
+                    class="pet-card bg-white rounded-xl shadow-md overflow-hidden transition transform hover:shadow-xl">
                     <!-- Imagen de la mascota -->
-                    <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9" 
-                         alt="Perro" class="w-full h-48 object-cover">
-                    
+                    <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9" alt="Perro"
+                        class="w-full h-48 object-cover">
+
                     <!-- Contenido de la tarjeta -->
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800">Max</h3>
@@ -118,11 +119,12 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Tarjeta de mascota 2 -->
-                <div class="pet-card bg-white rounded-xl shadow-md overflow-hidden transition transform hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba" 
-                         alt="Gato" class="w-full h-48 object-cover">
+                <div
+                    class="pet-card bg-white rounded-xl shadow-md overflow-hidden transition transform hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba" alt="Gato"
+                        class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800">Luna</h3>
                         <p class="text-gray-600 mb-2">Siamés • 1 año</p>
@@ -132,11 +134,12 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Tarjeta de mascota 3 -->
-                <div class="pet-card bg-white rounded-xl shadow-md overflow-hidden transition transform hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1553284965-e2815db2e5a0" 
-                         alt="Conejo" class="w-full h-48 object-cover">
+                <div
+                    class="pet-card bg-white rounded-xl shadow-md overflow-hidden transition transform hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1553284965-e2815db2e5a0" alt="Conejo"
+                        class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800">Bugs</h3>
                         <p class="text-gray-600 mb-2">Conejo Enano • 6 meses</p>
@@ -152,38 +155,42 @@
         <!-- SECCIÓN: CATEGORÍAS -->
         <section class="mb-16 fade-in">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Explora por categoría</h2>
-            
+
             <!-- Grid de categorías -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <!-- Categoría 1 - Perros -->
-                <a href="#" class="category-card bg-white p-6 rounded-lg shadow-md text-center transition transform hover:scale-105">
+                <a href="#"
+                    class="category-card bg-white p-6 rounded-lg shadow-md text-center transition transform hover:scale-105">
                     <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
                         <span class="text-3xl">🐶</span>
                     </div>
                     <h3 class="text-lg font-semibold text-gray-800">Perros</h3>
                     <p class="text-gray-600">+1,200 disponibles</p>
                 </a>
-                
+
                 <!-- Categoría 2 - Gatos -->
-                <a href="#" class="category-card bg-white p-6 rounded-lg shadow-md text-center transition transform hover:scale-105">
+                <a href="#"
+                    class="category-card bg-white p-6 rounded-lg shadow-md text-center transition transform hover:scale-105">
                     <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
                         <span class="text-3xl">🐱</span>
                     </div>
                     <h3 class="text-lg font-semibold text-gray-800">Gatos</h3>
                     <p class="text-gray-600">+800 disponibles</p>
                 </a>
-                
+
                 <!-- Categoría 3 - Conejos -->
-                <a href="#" class="category-card bg-white p-6 rounded-lg shadow-md text-center transition transform hover:scale-105">
+                <a href="#"
+                    class="category-card bg-white p-6 rounded-lg shadow-md text-center transition transform hover:scale-105">
                     <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
                         <span class="text-3xl">🐰</span>
                     </div>
                     <h3 class="text-lg font-semibold text-gray-800">Conejos</h3>
                     <p class="text-gray-600">+150 disponibles</p>
                 </a>
-                
+
                 <!-- Categoría 4 - Aves -->
-                <a href="#" class="category-card bg-white p-6 rounded-lg shadow-md text-center transition transform hover:scale-105">
+                <a href="#"
+                    class="category-card bg-white p-6 rounded-lg shadow-md text-center transition transform hover:scale-105">
                     <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
                         <span class="text-3xl">🐦</span>
                     </div>
@@ -206,7 +213,7 @@
                     <h3 class="text-xl font-bold mb-4">ADOPTAFÁCIL</h3>
                     <p class="text-gray-400">Conectando mascotas con hogares amorosos desde 2023.</p>
                 </div>
-                
+
                 <!-- Columna 2 - Enlaces útiles -->
                 <div>
                     <h4 class="font-semibold mb-4">Enlaces útiles</h4>
@@ -216,7 +223,7 @@
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Columna 3 - Contacto -->
                 <div>
                     <h4 class="font-semibold mb-4">Contacto</h4>
@@ -225,7 +232,7 @@
                         <li class="text-gray-400">+1 234 567 890</li>
                     </ul>
                 </div>
-                
+
                 <!-- Columna 4 - Redes sociales -->
                 <div>
                     <h4 class="font-semibold mb-4">Síguenos</h4>
@@ -236,7 +243,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Derechos de autor -->
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                 <p>© 2023 Adoptafácil. Todos los derechos reservados.</p>
@@ -249,22 +256,22 @@
     <!-- ============================================= -->
     <script>
         // Inicialización del efecto de partículas en el fondo
-        particlesJS.load('particles-js', 'particles.json', function() {
+        particlesJS.load('particles-js', 'particles.json', function () {
             console.log('Partículas cargadas correctamente');
         });
 
         // Animación de aparición al hacer scroll
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Seleccionar todos los elementos con clase fade-in
             const fadeElements = document.querySelectorAll('.fade-in');
-            
+
             // Función que se ejecuta al hacer scroll
-            const fadeInOnScroll = function() {
+            const fadeInOnScroll = function () {
                 fadeElements.forEach(element => {
                     // Calcular posición del elemento respecto a la ventana
                     const elementTop = element.getBoundingClientRect().top;
                     const windowHeight = window.innerHeight;
-                    
+
                     // Si el elemento está visible en la ventana
                     if (elementTop < windowHeight - 100) {
                         element.style.opacity = 1;
@@ -272,13 +279,14 @@
                     }
                 });
             };
-            
+
             // Escuchar evento de scroll
             window.addEventListener('scroll', fadeInOnScroll);
-            
+
             // Ejecutar una primera vez al cargar la página
-            fadeInOnScroll(); 
+            fadeInOnScroll();
         });
     </script>
 </body>
+
 </html>
